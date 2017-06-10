@@ -106,7 +106,6 @@ export class AppComponent {
       this.bees.push(me);
 
       console.log(this.bees);
-      console.log(this.bees[0].getPosts().length);
     });
 
   }
