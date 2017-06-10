@@ -20,6 +20,7 @@ import { Comment } from './models/comment';
 export class AppComponent {
 
   private bees: Bee[] = [];
+  isDataLoaded: boolean = false;
 
   constructor(private http: Http) {
     this.loadFromJson();
@@ -107,8 +108,8 @@ export class AppComponent {
 
       console.log(this.bees);
       console.log(this.bees[0].getPosts().length);
+      this.isDataLoaded = true;
     });
-
   }
 
   loadFromServer() {
