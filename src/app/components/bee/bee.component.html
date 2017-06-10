@@ -16,7 +16,9 @@
   </div>
   <ul class="numberswrapper">
     <li><small>post: {{ bee.getPosts().length }} </small></li>
-    <li><small>photos: {{ bee.getAlbum().getPhotos().length }}</small></li>
+    <div *ngIf='bee.getAlbum()'>
+      <li><small>photos: {{ bee.getAlbum().getPhotos().length }}</small></li>
+    </div>
     <li><small>todos: {{ bee.getTodos().length }}</small></li>
   </ul>
 </div>
