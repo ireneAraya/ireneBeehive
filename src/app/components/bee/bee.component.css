@@ -1,0 +1,36 @@
+.photowrapper {
+    display: inline-block;
+    width: 24%;
+    margin-right: 10px;
+}
+
+.photowrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.infowrapper {
+    display: inline-block;
+    width: 68%;
+    padding: 5px;
+}
+
+.datawrapper {
+    display: inline-block;
+    width: 80%;
+}
+
+.buttonswrapper {
+    display: inline-block;
+    width: 15%;
+}
+
+.numberswrapper {
+    display: block;
+    width: 100%;
+    list-style-type: none
+}
+
+.numberswrapper li {
+    display: inline-block;
+}

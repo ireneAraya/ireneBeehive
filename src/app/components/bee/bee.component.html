@@ -1,0 +1,24 @@
+<div class="photowrapper">
+  <img src="{{bee.getAvatarUrl()}}" alt="">
+</div>
+<div class="infowrapper">
+  <div class="datawrapper">
+    <h4>{{ bee.getName() }}</h4>
+    <p>{{ bee.getUserName() }}</p>
+    <p>{{ bee.getEmail() }}</p>
+    <p>{{ bee.getPhone() }}</p>
+    <p>{{ bee.getAddress().getCity() }}</p>
+  </div>
+  <div class="buttonswrapper">
+    <button class="btnOpen">Posts</button>
+    <button class="btnOpen">Album</button>
+    <button class="btnOpen">Todo</button>
+  </div>
+  <ul class="numberswrapper">
+    <li><small>post: {{ bee.getPosts().length }} </small></li>
+    <li><small>photos: {{ bee.getAlbum().getPhotos().length }}</small></li>
+    <li><small>todos: {{ bee.getTodos().length }}</small></li>
+  </ul>
+</div>
+
+<!--{{bees[10].getName()}}-->

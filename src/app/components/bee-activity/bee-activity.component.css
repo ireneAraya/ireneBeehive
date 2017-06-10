@@ -1,0 +1,11 @@
+app-posts, app-album, app-todos {
+    position: relative;
+    display: inline-block;
+    width: 31%; 
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+app-album, app-todos {
+    margin-left: 20px;
+}
