@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-bee',
@@ -8,10 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BeeComponent implements OnInit {
 
   @Input() bee;
+  @Output() sendBeeSelected = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+
+  onBeeSelected() {
+    //console.log('onBeeSelected', this.bee);
+    this.sendBeeSelected.emit(this.bee);
   }
 
 }

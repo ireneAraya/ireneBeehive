@@ -1,0 +1,16 @@
+h4 {
+    color: #f7a41a;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin: 10px 0;
+    background: #f7a41a;
+    color: #000;
+    line-height: 1.5em;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+}

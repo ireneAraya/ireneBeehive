@@ -1,3 +1,7 @@
-<p>
-  new-comment works!
-</p>
+<h4>New Comment</h4>
+<form action="" id="frmComment">
+  <input type="text" (change)='onCommentNameChange($event)' placeholder="Name">
+  <textarea rows="3" (change)='onCommentBodyChange($event)' placeholder="Body"></textarea>
+  <input type="email" (change)='onCommentEmailChange($event)' placeholder="Email">
+  <input type="submit" value="Ok!" (click)='onAddComment()'>
+</form>

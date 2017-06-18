@@ -1,1 +1,11 @@
-<h2>{{ title }}</h2>
+<div class="todos">
+    <div *ngFor='let todo of bee.getTodos()'>
+        <app-todo [todo]='todo'>Loading...</app-todo>
+    </div>
+    <input type="button" class="btnTodo" (click)="onModalTodo = !onModalTodo" value="Add Todo">
+
+    <div class="modal" *ngIf="onModalTodo">
+        <button (click)="onModalTodo = !onModalTodo">X</button>
+        <app-new-todo [bee]='bee'></app-new-todo>
+    </div>
+</div>

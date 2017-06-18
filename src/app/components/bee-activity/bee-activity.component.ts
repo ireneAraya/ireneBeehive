@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Bee } from '../../models/bee';
+import { Post } from '../../models/post'
 
 @Component({
   selector: 'app-bee-activity',
@@ -7,9 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BeeActivityComponent implements OnInit {
 
-  @Input() bees;
+  @Input() bee;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

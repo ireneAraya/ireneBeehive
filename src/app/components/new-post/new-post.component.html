@@ -1,3 +1,6 @@
-<p>
-  new-post works!
-</p>
+<h4>New Post</h4>
+<form action="" id="frmPost">
+  <input type="text" (change)='onPostTitleChange($event)' placeholder="Title">
+  <textarea rows="3" (change)='onPostBody($event)' placeholder="Body"></textarea>
+  <input type="submit" value="Ok!" (click)='onAddPost()'>
+</form>

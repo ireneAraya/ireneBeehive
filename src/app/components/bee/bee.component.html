@@ -1,26 +1,25 @@
-<div class="photowrapper">
-  <img src="{{bee.getAvatarUrl()}}" alt="">
-</div>
-<div class="infowrapper">
-  <div class="datawrapper">
-    <h4>{{ bee.getName() }}</h4>
+<a (click)='onBeeSelected()'>
+  <div class="photowrapper">
+    <img src="{{bee.getAvatarUrl()}}" alt="">
     <p>{{ bee.getUserName() }}</p>
-    <p>{{ bee.getEmail() }}</p>
-    <p>{{ bee.getPhone() }}</p>
-    <p>{{ bee.getAddress().getCity() }}</p>
   </div>
-  <div class="buttonswrapper">
-    <button class="btnOpen">Posts</button>
-    <button class="btnOpen">Album</button>
-    <button class="btnOpen">Todo</button>
-  </div>
-  <ul class="numberswrapper">
-    <li><small>post: {{ bee.getPosts().length }} </small></li>
-    <div *ngIf='bee.getAlbum()'>
-      <li><small>photos: {{ bee.getAlbum().getPhotos().length }}</small></li>
+  <div class="infowrapper">
+    <div class="datawrapper">
+      <h4>{{ bee.getName() }}</h4>
+      <p>{{ bee.getEmail() }}</p>
+      <p>{{ bee.getPhone() }}</p>
+      <p>{{ bee.getAddress().getCity() }}</p>
     </div>
-    <li><small>todos: {{ bee.getTodos().length }}</small></li>
-  </ul>
-</div>
-
-<!--{{bees[10].getName()}}-->
+    <!--<div class="buttonswrapper">
+      <button class="btnOpen" (click)='onPostSelected()'>Posts</button>
+      <button class="btnOpen" (click)='onAlbumSelected()'>Album</button>
+      <button class="btnOpen" (click)='onTodoSelected()'>Todo</button>
+    </div>-->
+    <hr>
+    <ul class="numberswrapper">
+      <li><small>post: {{ bee.getPosts().length }} </small></li>
+      <li *ngIf='bee.getAlbum()'><small>photos: {{ bee.getAlbum().getPhotos().length }}</small></li>
+      <li><small>todos: {{ bee.getTodos().length }}</small></li>
+    </ul>
+  </div>
+</a>

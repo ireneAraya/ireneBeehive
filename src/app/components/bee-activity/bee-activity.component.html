@@ -1,3 +1,53 @@
-<app-posts>Loading...</app-posts>
-<app-album>Loading...</app-album>
-<app-todos>Loading...</app-todos>
+<div class="posts">
+    <div class="title">
+        <svg version="1.1" class="icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="38.342px" height="38.725px" viewBox="-0.5 -0.5 38.342 38.725" enable-background="new -0.5 -0.5 38.342 38.725"
+            xml:space="preserve">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M24.911,37.725H5.431c-3,0-5.431-2.433-5.431-5.433V5.431 C0,2.432,2.432,0,5.431,0H31.91c3,0,5.432,2.432,5.432,5.431v19.333L24.911,37.725z"
+            />
+            <path d="M37.338,24.765h-7.473c-3,0-4.961,2.435-4.961,5.435v7.525L37.338,24.765z" />
+            <rect x="5.432" y="6.339" width="26.667" height="5.833" />
+            <rect x="5.432" y="16.172" width="26.667" height="5.833" />
+            <rect x="5.432" y="25.577" width="14.333" height="5.834" />
+        </svg>
+        <h2>Bee's Posts</h2>
+    </div>
+    <!--<div *ngFor='let bee of bees'>-->
+    <app-posts [bee]='bee'></app-posts>
+    <!--</div>-->
+</div>
+
+<div class="album">
+    <div class="title">
+        <svg version="1.1" class="icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="38.816px" height="38.816px" viewBox="-0.5 -0.5 38.816 38.816" enable-background="new -0.5 -0.5 38.816 38.816"
+            xml:space="preserve">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M37.816,31.915c0,3.26-2.644,5.901-5.901,5.901H5.902 C2.643,37.816,0,35.174,0,31.915V5.902C0,2.642,2.643,0,5.902,0h26.013c3.259,0,5.901,2.643,5.901,5.902V31.915z"
+            />
+            <path d="M31.558,10.369h-4.177L23.82,6.307H13.604l-3.24,4.062H6.258c-1.987,0-3.6,1.611-3.6,3.6v14.677c0,1.987,1.612,3.6,3.6,3.6 h25.301c1.987,0,3.601-1.611,3.601-3.6V13.968C35.159,11.98,33.546,10.369,31.558,10.369z"
+            />
+            <circle fill="#FFFFFF" cx="18.908" cy="21.306" r="7.562" />
+        </svg>
+        <h2>Bee's Album</h2>
+    </div>
+
+    <app-album [bee]='bee'></app-album>
+
+</div>
+
+<div class="todos">
+    <div class="title">
+        <svg version="1.1" class="icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="38.816px" height="38.816px" viewBox="-0.5 -0.5 38.816 38.816" enable-background="new -0.5 -0.5 38.816 38.816"
+            xml:space="preserve">
+            <path fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" d="M37.816,31.915c0,3.26-2.645,5.901-5.901,5.901H5.902 C2.643,37.816,0,35.174,0,31.915V5.902C0,2.642,2.643,0,5.902,0h26.013c3.259,0,5.901,2.644,5.901,5.902V31.915z"
+            />
+            <path d="M34.156,6.799L33.87,6.488c-0.846-0.914-2.271-0.969-3.188-0.125L14.868,26.416l-5.997-4.899 c-0.975-0.774-2.393-0.614-3.167,0.363l-0.264,0.333c-0.774,0.975-0.611,2.393,0.366,3.167l7.721,6.307 c0.394,0.313,0.858,0.466,1.326,0.481c0.601,0.044,1.215-0.145,1.694-0.586L34.03,9.985C34.945,9.14,35.001,7.714,34.156,6.799z"
+            />
+        </svg>
+        <h2>Bee's Todos</h2>
+    </div>
+    <!--<div *ngFor='let bee of bees'>-->
+    <app-todos [bee]='bee'></app-todos>
+    <!--</div>-->
+</div>

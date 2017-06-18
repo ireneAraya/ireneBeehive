@@ -1,11 +1,17 @@
-app-posts, app-album, app-todos {
+.posts, .album, .todos {
     position: relative;
     display: inline-block;
     width: 31%; 
-    padding: 10px;
-    border: 1px solid #000;
 }
 
-app-album, app-todos {
+.album, .todos {
     margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+    .posts, .album, .todos {
+        display: block;
+        width: 100%;
+        margin: 0 0 40px;
+    }
 }

@@ -21,9 +21,15 @@ export class AppComponent {
 
   private bees: Bee[] = [];
   isDataLoaded: boolean = false;
+  private selectedBee = null;
 
   constructor(private http: Http) {
     this.loadFromJson();
+  }
+
+  beeReceived(bee: Bee) {
+    console.log(bee);
+    this.selectedBee = bee;
   }
 
   loadData(usersUrl: string, postsUrl: string, albumsUrl: string, photosUrl: string, todosUrl: string, commentsUrl: string) {
@@ -102,13 +108,13 @@ export class AppComponent {
         ('0.000001', '0.000002'));
       let me = new Bee(11, 'Irene Araya', 'iaraya', 'iarayal@ucenfotec.ac.cr', '8812-5029', 'www.fotoygraficacr.com', address
         , company, 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAk1AAAAJDIyNDE0N2UyLTQ0ZjQtNDM1ZC04YzRkLWE1YjI5MzU1MDlhNg.jpg');
-      let album = new Album(1000, 11, 'Irenes Photos');
+      let album = new Album(1000, 11, 'My Photos');
       me.setAlbum(album);
       this.bees.push(me);
 
       console.log(this.bees);
-      console.log(this.bees[0].getPosts().length);
       this.isDataLoaded = true;
+      this.selectedBee = me;
     });
   }
 
@@ -130,4 +136,5 @@ export class AppComponent {
       '../assets/data/todos.json',
       '../assets/data/comments.json');
   }
+
 }

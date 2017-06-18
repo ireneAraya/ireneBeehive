@@ -1,3 +1,20 @@
-<p>
-  post works!
-</p>
+<div class="post">
+  <h4>{{ post.getTitle() }}</h4>
+  <p>{{ post.getBody() }}</p>
+  <a (click)="isShown = !isShown">
+    <p *ngIf='post.getComments()' class="right"><small>coments: {{ post.getComments().length }}</small></p>
+  </a>
+  <div *ngFor='let comment of post.getComments()' class="commentwrapper">
+    <div *ngIf="isShown">
+      <p><strong>{{ comment.getName() }}</strong></p>
+      <p>{{ comment.getBody() }}</p>
+      <p class="right">{{ comment.getEmail() }}</p>
+    </div>
+  </div>
+  <input type="button" class="btnComment" (click)="onModalComment = !onModalComment" value="Add Comment">
+
+  <div class="modal" *ngIf="onModalComment">
+    <button (click)="onModalComment = !onModalComment">X</button>
+    <app-new-comment [post]='post'></app-new-comment>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+.logowrapper {
+    width: 100%;
+}
+#logo {
+    display: block;
+    margin: 40px auto;
+    width: 400px;
+}

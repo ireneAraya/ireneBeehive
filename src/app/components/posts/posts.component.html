@@ -1,1 +1,11 @@
-<h2>{{title}}</h2>
+<div class="posts">
+    <div *ngFor='let post of bee.getPosts()'>
+        <app-post [post]='post'>Loading...</app-post>
+    </div>
+    <input type="button" class="btnPost" (click)="onModalPost = !onModalPost" value="addPost">
+
+    <div class="modal" *ngIf="onModalPost">
+        <button (click)="onModalPost = !onModalPost">X</button>
+        <app-new-post [bee]='bee'></app-new-post>
+    </div>
+</div>

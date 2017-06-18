@@ -1,3 +1,8 @@
-<p>
-  todo works!
-</p>
+<div class="todo">
+  <h4>{{ todo.getTitle() }}</h4>
+  <div class="inputGroup" *ngIf='!todo.getCompleted()'>
+    <input id="chk{{todo.getId()}}" type="checkbox" name="chkTodo" (change)='onChecked($event)'>
+    <label for="chk{{todo.getId()}}"></label>
+    <p><small>Completed!</small></p>
+  </div>
+</div>
